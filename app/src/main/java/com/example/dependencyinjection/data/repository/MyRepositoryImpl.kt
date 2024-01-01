@@ -4,8 +4,9 @@ import android.app.Application
 import com.example.dependencyinjection.R
 import com.example.dependencyinjection.data.remote.MyApi
 import com.example.dependencyinjection.domain.repository.MyRepository
+import javax.inject.Inject
 
-class MyRepositoryImpl(
+class MyRepositoryImpl @Inject constructor(
     private val api: MyApi,
     private val appContext: Application
 ) : MyRepository{

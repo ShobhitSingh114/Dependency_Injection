@@ -26,15 +26,7 @@ object AppModule {
             .create(MyApi::class.java)
     }
 
-    @Provides
-    @Singleton
-    fun provideMyRepository(
-        api: MyApi,
-        app: Application,
-        @Named("hello1") hello1: String
-    ): MyRepository {
-        return MyRepositoryImpl(api, app)
-    }
+
 
     /**
      * Two dependencies of same type
